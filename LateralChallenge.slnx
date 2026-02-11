@@ -1,0 +1,30 @@
+<Solution>
+  <Folder Name="/1_Client/">
+    <File Path="docker-compose.yaml" />
+    <Project Path="Client/Client.csproj" />
+  </Folder>
+  <Folder Name="/2_Manager/">
+    <Project Path="Manager/Manager.csproj" />
+  </Folder>
+  <Folder Name="/3_Engine/">
+    <Project Path="Engine/Engine.csproj" />
+  </Folder>
+  <Folder Name="/4_Resources/">
+    <Project Path="Resources/Resources.csproj" />
+  </Folder>
+  <Folder Name="/5_Database/">
+    <Project Path="Database/Database.csproj" />
+  </Folder>
+  <Folder Name="/6_Infrastructure/">
+    <Project Path="Infrastructure/Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/7_Tests/">
+    <Project Path="Tests/Tests.csproj" Id="b32acc42-edbb-46c8-8ba2-f32a7e78f554" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path=".dockerignore" />
+    <File Path=".gitignore" />
+    <File Path="docker-compose.yaml" />
+    <File Path="Dockerfile" />
+  </Folder>
+</Solution>
