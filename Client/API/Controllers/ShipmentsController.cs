@@ -59,6 +59,8 @@ namespace Client.API.Controllers
                 return BadRequest(ModelState);
             }
             var updated = await manager.UpdateShipmentStatusAsync(id, request.Status, null);
+            if (updated == null)
+                return NotFound(new { message = $"Shipment with ID {id} not found" });
             return Ok(mapper.Map<Shipment>(updated));
         }
 
@@ -78,6 +80,17 @@ namespace Client.API.Controllers
                 return NotFound(new { message = $"Shipment with ID {id} not found" });
 
             return Ok(mapper.Map<Shipment>(updated));
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            // In a real application, you'd get the current user's ID from authentication
+            // For now, we'll use a default value
+            var deletedBy = Guid.Empty;
+
+            await manager.DeleteShipmentAsync(id, deletedBy);
+            return NoContent();
         }
     }
 }

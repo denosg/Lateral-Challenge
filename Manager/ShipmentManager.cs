@@ -108,8 +108,7 @@ namespace Manager
             var shipment = await resource.GetByIdAsync(id);
             if (shipment == null)
             {
-                logger.LogWarning("Attempted to update non-existent shipment {ShipmentId}", id);
-                throw new ShipmentNotFoundException($"Shipment with ID {id} not found");
+                return null;
             }
 
             ValidateStatusTransition(shipment.Status, newStatus);

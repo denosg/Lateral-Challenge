@@ -22,24 +22,6 @@ services:
     networks:
       - shipment-network
 
-  api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: shipment-api
-    ports:
-      - "8080:8080"
-    environment:
-      ASPNETCORE_ENVIRONMENT: "Development"
-      ASPNETCORE_URLS: "http://+:8080"
-      ConnectionStrings__DefaultConnection: "Server=sqlserver,1433;Database=ShipmentDB;User Id=sa;Password=LateralInterview!1;TrustServerCertificate=True;MultipleActiveResultSets=true"
-    depends_on:
-      sqlserver:
-        condition: service_healthy
-    networks:
-      - shipment-network
-    restart: on-failure
-
 volumes:
   shipment_sql_data:
 
