@@ -105,6 +105,7 @@ dotnet test
 | POST | `/api/shipments` | Create a new shipment |
 | PUT | `/api/shipments/{id}` | Update a shipment |
 | PATCH | `/api/shipments/{id}/status` | Update shipment status |
+| DELETE | `/api/Shipments/{id}` | Delete a shipment
 
 ### Health Check
 
