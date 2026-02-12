@@ -31,7 +31,8 @@ namespace Database
             entity.HasIndex(x => x.Status);
 
             entity.Property(x => x.Version)
-                  .IsRowVersion();
+                  .IsConcurrencyToken()
+                  .IsRequired();
 
             entity.Property(x => x.CreatedAt)
                   .HasDefaultValueSql("GETUTCDATE()");

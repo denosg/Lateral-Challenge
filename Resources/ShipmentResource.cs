@@ -69,7 +69,7 @@ namespace Resources
                 var dbEntity = _mapper.Map<Shipment>(shipment);
 
                 dbEntity.CreatedAt = DateTime.UtcNow;
-                dbEntity.Version = Guid.NewGuid();
+                dbEntity.Version = NewId.NextSequentialGuid();
                 dbEntity.IsDeleted = false;
                 dbEntity.Tenant = _tenantGetter.Tenant;
 
@@ -102,6 +102,7 @@ namespace Resources
 
                 // Set Version AFTER Update() and OriginalValue
                 existing.Version = NewId.NextSequentialGuid();
+                shipment.Version = existing.Version; // Update the input model's version to match the new value
                 _db.Shipments.Entry(existing).Property(p => p.Version).IsModified = true;
             }
 
