@@ -39,6 +39,13 @@ namespace Database
 
             entity.HasIndex(x => new { x.Tenant, x.Status, x.IsDeleted })
                   .HasFilter("[IsDeleted] = 0");
+
+            entity.HasIndex(x => new { x.Tenant, x.IsDeleted, x.Status });
+
+            entity.HasIndex(x => new { x.Tenant, x.IsDeleted, x.CreatedAt });
+
+            entity.HasIndex(x => new { x.Tenant, x.IsDeleted, x.ID });
+
         }
     }
 }
