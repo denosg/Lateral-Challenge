@@ -215,6 +215,9 @@ The application includes built-in retry logic:
 - `IX_Shipments_Status`
 - `IX_Shipments_Tenant_Status_IsDeleted` (Filtered)
 
+### Performance Tests
+<img width="1153" height="547" alt="perf_test1" src="https://github.com/user-attachments/assets/be6c45ac-adae-4f74-8cb6-1cd988997549" /><img width="1056" height="380" alt="perf_test2" src="https://github.com/user-attachments/assets/af191488-e0e2-4393-80bb-0dfc13f41bdc" /><img width="991" height="405" alt="perf_test3" src="https://github.com/user-attachments/assets/2a00b791-6711-4efe-a819-49dc0553ab4b" /><img width="1014" height="383" alt="perf_test4" src="https://github.com/user-attachments/assets/8b20716a-5ace-4c39-8730-799a83ff3b76" /><img width="951" height="386" alt="perf_test5" src="https://github.com/user-attachments/assets/a55067b8-c822-4173-af9e-2edc631744b5" />
+
 ## Support
 
 For issues and questions:
